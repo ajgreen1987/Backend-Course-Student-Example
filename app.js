@@ -8,14 +8,21 @@ const port = 3000;
 // set the view engine to ejs
 app.set('view engine', 'ejs');
 
+// Root route
+// Comment lines 13 - 15 to use the menu route
+//app.get('/', function(req, res) {
+//    res.send("This is the App Level Route")
+//});
+
 // Setup the Routes
+// Optional Route - Uncomment line 18 to use it
+var menu = require("./menu.js")
 var course = require("./course.js");
 var student = require("./student.js")
 
-app.get('/', function(req, res) {
-    res.send("This is the App Level Route")
-  });
 
+// Optional Route - Uncomment line 25 to use it
+app.use('/', menu)
 app.use('/course', course);
 app.use('/student', student);
 
