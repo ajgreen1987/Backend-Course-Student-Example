@@ -3,14 +3,13 @@
 var express = require('express');
 var router = express.Router();
 
-// Home page route.
-router.get('/', function (req, res) {
-  res.send("Course home page");
-})
+const {courseView} = require('../controllers/courseController');
 
-// About page route.
+// Home page route.
+router.get('/', courseView)
+
 router.get('/about', function (req, res) {
-  res.render('course');
+  res.send("Course home page");
 })
 
 module.exports = router;

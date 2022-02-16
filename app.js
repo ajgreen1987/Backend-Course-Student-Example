@@ -16,9 +16,9 @@ app.set('view engine', 'ejs');
 
 // Setup the Routes
 // Optional Route - Uncomment line 18 to use it
-var menu = require("./menu.js")
-var course = require("./course.js");
-var student = require("./student.js")
+var menu = require("./routes/menu.js")
+var course = require("./routes/course.js");
+var student = require("./routes/student.js")
 
 
 // Optional Route - Uncomment line 25 to use it

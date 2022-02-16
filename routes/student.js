@@ -10,7 +10,7 @@ router.get('/', function (req, res) {
 
 // About page route.
 router.get('/profile', function (req, res) {
-  res.send("Profile for this student");
+  res.render('student')
 })
 
 module.exports = router;
